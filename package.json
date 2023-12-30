@@ -4,10 +4,17 @@
   "type": "module",
   "author": "Leonardo Henrique <leonardo0507.business@gmail.com>",
   "scripts": {
-    "start:dev": "tsx watch ./src/server.ts"
+    "start:dev": "tsx watch ./src/server.ts",
+    "lint": "eslint . --ext .ts --max-warnings 0 --fix --cache",
+    "format": "prettier . --write --cache"
   },
   "devDependencies": {
     "@types/node": "20.10.6",
+    "@typescript-eslint/eslint-plugin": "6.16.0",
+    "@typescript-eslint/parser": "6.16.0",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "9.1.0",
+    "prettier": "3.1.1",
     "tsx": "4.7.0",
     "typescript": "5.3.3"
   }
