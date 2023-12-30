@@ -6,7 +6,10 @@
   "scripts": {
     "start:dev": "tsx watch ./src/server.ts",
     "lint": "eslint . --ext .ts --max-warnings 0 --fix --cache",
-    "format": "prettier . --write --cache"
+    "format": "prettier . --write --cache",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage.enabled=true --coverage.all=false"
   },
   "devDependencies": {
     "@types/node": "20.10.6",
@@ -16,6 +19,8 @@
     "eslint-config-prettier": "9.1.0",
     "prettier": "3.1.1",
     "tsx": "4.7.0",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "vite-tsconfig-paths": "4.2.3",
+    "vitest": "1.1.0"
   }
 }
