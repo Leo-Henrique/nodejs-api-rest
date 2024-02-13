@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "author": "Leonardo Henrique <leonardo0507.business@gmail.com>",
   "scripts": {
+    "prepare": "husky install",
     "start:dev": "tsx watch ./src/server.ts",
     "lint": "eslint . --ext .ts --max-warnings 0 --fix --cache",
     "format": "prettier . --write --cache",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage.enabled=true --coverage.all=false",
-    "prepare": "husky install"
+    "test:coverage": "vitest run --coverage.enabled=true --coverage.all=false"
   },
   "dependencies": {
     "dotenv": "16.3.1",
