@@ -12,12 +12,12 @@ const schema = z.object({
   POSTGRES_NAME: z.string(),
 });
 
-const _env = schema.safeParse(process.env);
+const parsedEnv = schema.safeParse(process.env);
 
-if (!_env.success) {
-  console.error(_env.error.format());
+if (!parsedEnv.success) {
+  console.error(parsedEnv.error.flatten().fieldErrors);
 
   throw new Error("Invalid environment variables.");
 }
 
-export const env = _env.data;
+export const env = parsedEnv.data;

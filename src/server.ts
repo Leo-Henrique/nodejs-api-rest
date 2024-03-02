@@ -1,5 +1,5 @@
 import { app } from "./app";
-import { env } from "./config";
+import { env } from "./env";
 
 (async () => {
   await app.listen({ host: "0.0.0.0", port: env.APP_PORT });
