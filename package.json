@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Leonardo Henrique <leonardo0507.business@gmail.com>",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "start:dev": "tsx watch ./src/server.ts",
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --ext .ts --max-warnings 0 --fix --cache",
