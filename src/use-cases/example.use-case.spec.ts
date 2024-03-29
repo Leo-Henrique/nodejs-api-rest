@@ -1,3 +1,4 @@
+import { faker } from "@faker-js/faker";
 import { beforeEach, describe, expect, it } from "vitest";
 import { ExampleUseCase } from "./example.use-case";
 
@@ -8,15 +9,10 @@ describe("Example Use Case", () => {
     sut = new ExampleUseCase();
   });
 
-  it("should be able to return false when the argument is false", () => {
-    const result = sut.execute(false);
+  it("should be able to return what was passed as an argument", () => {
+    const input = faker.lorem.text();
+    const result = sut.execute(input);
 
-    expect(result).toBeFalsy();
-  });
-
-  it("should be able to return true when the argument is true", () => {
-    const result = sut.execute(true);
-
-    expect(result).toBeTruthy();
+    expect(result).toEqual(input);
   });
 });

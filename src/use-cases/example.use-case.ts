@@ -1,5 +1,5 @@
 export class ExampleUseCase {
-  execute(ok: boolean) {
-    return ok;
+  execute(data: unknown) {
+    return data;
   }
 }

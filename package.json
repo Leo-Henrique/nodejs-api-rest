@@ -8,8 +8,8 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --ext .ts --max-warnings 0 --fix --cache",
     "format": "prettier . --write --cache",
-    "test": "vitest run",
-    "test:watch": "vitest",
+    "test:unit": "vitest run",
+    "test:unit:watch": "vitest",
     "test:coverage": "vitest run --coverage.enabled=true --coverage.all=false"
   },
   "dependencies": {
@@ -19,11 +19,13 @@
     "zod": "3.22.4"
   },
   "devDependencies": {
+    "@faker-js/faker": "8.4.1",
     "@types/node": "20.11.30",
     "@typescript-eslint/eslint-plugin": "7.4.0",
     "@typescript-eslint/parser": "7.4.0",
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-vitest": "0.4.0",
     "husky": "9.0.11",
     "lint-staged": "15.2.2",
     "prettier": "3.2.5",
